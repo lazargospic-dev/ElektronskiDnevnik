@@ -33,10 +33,7 @@ namespace dnevnik410a
         private void button1_Click(object sender, EventArgs e)
         {
             DataTable menjano = podaci.GetChanges();
-            // DataRowState.Modified = promenjeni
-            // DataRowState.Added    = dodati
-            // DataRowState.Deleted  = obrisani
-            // DataRowState.Unchanged= nepromenjeni
+    
             Adapter.UpdateCommand = new SqlCommandBuilder(Adapter).GetUpdateCommand();
             if (menjano != null)
             {
